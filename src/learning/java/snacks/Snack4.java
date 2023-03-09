@@ -1,4 +1,4 @@
-package learning.java.variables;
+package learning.java.snacks;
 
 import java.util.Scanner;
 
@@ -18,8 +18,10 @@ public class Snack4 {
     boolean found = false;
     for (int i = 0; i < invited.length && !found; i++) {
       if (name.equalsIgnoreCase(invited[i]))
-        // ti ho trovato
+      // ti ho trovato
+      {
         found = true;
+      }
 
     }
 

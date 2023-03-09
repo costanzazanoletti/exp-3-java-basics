@@ -1,4 +1,4 @@
-package learning.java.variables;
+package learning.java.exercises;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package learning.java.variables;
+package learning.java.snacks;
 
 import java.util.Scanner;
 
