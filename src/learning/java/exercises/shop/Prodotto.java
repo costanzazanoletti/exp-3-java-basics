@@ -71,6 +71,11 @@ public class Prodotto {
     return prezzo.add(ivaSulPrezzo).setScale(2, RoundingMode.HALF_EVEN);
   }
 
+  public BigDecimal getPrezzoScontato(boolean ivato) {
+    BigDecimal prezzoDaScontare = ivato ? getPrezzoIvato() : prezzo;
+    return prezzoDaScontare.subtract(prezzoDaScontare.multiply(new BigDecimal("0.02")));
+  }
+
   public String getNomeEsteso() {
     return getCodiceFormattato() + "-" + nome;
   }
@@ -92,12 +97,12 @@ public class Prodotto {
 
   @Override
   public String toString() {
-    return "Prodotto{" +
-        "codice=" + codice +
-        ", nome='" + nome + '\'' +
-        ", descrizione='" + descrizione + '\'' +
-        ", prezzo=" + prezzo +
-        ", iva=" + iva +
-        '}';
+    return
+        "codice=" + getCodiceFormattato() +
+            ", nome='" + nome + '\'' +
+            ", descrizione='" + descrizione + '\'' +
+            ", prezzo=" + prezzo +
+            ", iva=" + iva +
+            ", prezzo con iva=" + getPrezzoIvato();
   }
 }

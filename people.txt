@@ -1,0 +1,7 @@
+name: John age: 12
+name: Jano age: 33
+name: Will age: 43
+name: Susie age: 90
+name: Luca age: 25
+name: Paola age: 10
+name: Pina age: 22
