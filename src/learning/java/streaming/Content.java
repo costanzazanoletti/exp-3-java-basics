@@ -1,6 +1,6 @@
 package learning.java.streaming;
 
-public class Content {
+public abstract class Content {
 
   private String title;
   private String description;
@@ -26,9 +26,7 @@ public class Content {
     this.description = description;
   }
 
-  public void play() {
-    System.out.println("Playing " + title);
-  }
+  public abstract void play();
 
 /*  @Override
   public String toString() {
